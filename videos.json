@@ -86,5 +86,13 @@
     "categoryName": "Wisata & Sejarah",
     "description": "Menelusuri keunikan tempat tinggal dan kebudayaan masyarakat yang mendiami kawasan unik nan surealis.",
     "author": "Exotic Destinations"
+  },
+  {
+    "id": "A3b543U74rk",
+    "title": "Pesona Alam Terindah di Dunia yang Menakjubkan",
+    "category": "nature",
+    "categoryName": "Alam & Eksplorasi",
+    "description": "Kumpulan panorama dan pemandangan alam paling memukau di planet Bumi yang wajib disaksikan.",
+    "author": "Nature Documentaries"
   }
 ]
