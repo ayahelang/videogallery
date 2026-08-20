@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Video Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <header class="header">
+    <div class="badge"><i class="fa-solid fa-bolt"></i> Ultimate Showcase</div>
+    <h1 class="title">Next-Gen <span>Video Gallery</span></h1>
+    <p class="subtitle">Eksplorasi petualangan dan cerita visual terbaik dari seluruh dunia dengan pengalaman sinematik interaktif.</p>
+
+    <div class="controls-container">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Cari video favoritmu...">
+        <button id="clearSearchBtn" class="clear-btn" aria-label="Clear search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="category-filter" id="categoryFilter">
+        <button class="filter-btn active" data-category="all">Semua Video</button>
+        <button class="filter-btn" data-category="travel">Wisata & Sejarah</button>
+        <button class="filter-btn" data-category="nature">Alam & Eksplorasi</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="gallery-stats"><span id="videoCount">Menampilkan 4 video</span></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="no-results" id="noResults" style="display: none;">
+      <i class="fa-regular fa-compass"></i>
+      <h3>Tidak ada video ditemukan</h3>
+      <p>Coba gunakan kata kunci atau kategori yang lain.</p>
+    </div>
+  </main>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-wrapper">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-content">
+        <div class="iframe-container">
+          <iframe id="modalIframe" src="" title="YouTube Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="modal-info">
+          <span class="modal-tag" id="modalCategory">Kategori</span>
+          <h2 id="modalTitle">Judul Video</h2>
+          <p id="modalDescription">Deskripsi video akan muncul di sini.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Futuristic Video Gallery. Ready for GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
