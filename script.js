@@ -1,37 +1,6 @@
-const videoData = [
-  {
-    id: "_QOExkQZSgY",
-    title: "Keliling kota PALING ISLAM di Spanyol - Granada, Andalusia",
-    category: "travel",
-    categoryName: "Wisata & Sejarah",
-    description: "Petualangan menjelajahi sejarah dan keindahan arsitektur Islam di Granada, Andalusia, Spanyol bersama Aziza Francienne.",
-    author: "Aziza Francienne"
-  },
-  {
-    id: "FtRkc82KJtY",
-    title: "Belanda: Negara Kecil Penuh Dengan Keajaiban",
-    category: "travel",
-    categoryName: "Wisata & Sejarah",
-    description: "Dokumenter sinematik yang mengulas keindahan lanskap, kincir angin, dan kanal megah di negeri Belanda.",
-    author: "Explorer Travel"
-  },
-  {
-    id: "ro-8ODGp3Yc",
-    title: "23 Desa Terindah Paling Sulit Dijangkau Di Bumi",
-    category: "nature",
-    categoryName: "Alam & Eksplorasi",
-    description: "Menjelajahi 23 pemukiman unik dan desa terindah yang tersembunyi di penjuru dunia dan paling sulit dijangkau manusia.",
-    author: "VanDjen Media"
-  },
-  {
-    id: "ec1hkzXNdN8",
-    title: "Apakah Ini Negara Terindah di Dunia? | Perjalanan Sinematik Norwegia",
-    category: "nature",
-    categoryName: "Alam & Eksplorasi",
-    description: "Menyaksikan kemegahan fjord, pegunungan salju, dan keajaiban alam Norwegia dalam tayangan sinematik menakjubkan.",
-    author: "Jejak Media"
-  }
-];
+let videoData = [];
+let currentSearchQuery = '';
+let currentCategory = 'all';
 
 const galleryGrid = document.getElementById('galleryGrid');
 const searchInput = document.getElementById('searchInput');
@@ -47,13 +16,31 @@ const modalDescription = document.getElementById('modalDescription');
 const modalCategory = document.getElementById('modalCategory');
 const closeModalBtn = document.getElementById('closeModalBtn');
 
-let currentSearchQuery = '';
-let currentCategory = 'all';
-
 document.addEventListener('DOMContentLoaded', () => {
-  renderGallery();
+  loadVideoData();
   setupEventListeners();
 });
+
+// Mengambil data dari file videos.json
+async function loadVideoData() {
+  try {
+    const response = await fetch('videos.json');
+    if (!response.ok) {
+      throw new Error(`Gagal memuat JSON: Status ${response.status}`);
+    }
+    videoData = await response.json();
+    renderGallery();
+  } catch (error) {
+    console.error('Error:', error);
+    videoCount.textContent = 'Gagal memuat data video.';
+    galleryGrid.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; color: #ef4444; padding: 2rem;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+        <p>Gagal memuat <code>videos.json</code>. Pastikan file JSON berada di folder yang sama.</p>
+      </div>
+    `;
+  }
+}
 
 function renderGallery() {
   const filteredVideos = videoData.filter(video => {
@@ -72,7 +59,7 @@ function renderGallery() {
   } else {
     noResults.style.display = 'none';
 
-    filteredVideos.forEach((video, index) => {
+    filteredVideos.forEach(video => {
       const card = document.createElement('article');
       card.className = 'card';
       card.innerHTML = `
