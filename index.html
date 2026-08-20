@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futuristic Video Gallery</title>
+  <title>Video Hub — Silverhawk Network</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,15 +14,28 @@
   <div class="bg-glow orb-1"></div>
   <div class="bg-glow orb-2"></div>
 
+  <!-- Silverhawk Network Top Navigation Bar -->
+  <nav class="sh-navbar">
+    <div class="sh-nav-container">
+      <a href="https://silverhawk.web.id/" class="sh-brand">
+        <i class="fa-solid fa-shield-halved sh-logo"></i>
+        <span>SILVERHAWK<span>NETWORK</span></span>
+      </a>
+      <div class="sh-nav-links">
+        <a href="https://silverhawk.web.id/" class="sh-link"><i class="fa-solid fa-house"></i> Main Portal</a>
+      </div>
+    </div>
+  </nav>
+
   <header class="header">
-    <div class="badge"><i class="fa-solid fa-bolt"></i> Ultimate Showcase</div>
-    <h1 class="title">Next-Gen <span>Video Gallery</span></h1>
-    <p class="subtitle">Eksplorasi petualangan dan cerita visual terbaik dari seluruh dunia dengan pengalaman sinematik interaktif.</p>
+    <div class="badge"><i class="fa-solid fa-circle-play"></i> Silverhawk Video Hub</div>
+    <h1 class="title">Explore <span>Visual Media</span></h1>
+    <p class="subtitle">Koleksi tayangan video pilihan, dokumenter, dan eksplorasi visual terbaik yang terintegrasi dengan jaringan Silverhawk Network.</p>
 
     <div class="controls-container">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="searchInput" placeholder="Cari video favoritmu...">
+        <input type="text" id="searchInput" placeholder="Cari konten video...">
         <button id="clearSearchBtn" class="clear-btn" aria-label="Clear search">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -37,7 +50,7 @@
   </header>
 
   <main class="main-container">
-    <div class="gallery-stats"><span id="videoCount">Menampilkan 4 video</span></div>
+    <div class="gallery-stats"><span id="videoCount">Memuat video...</span></div>
     <div class="gallery-grid" id="galleryGrid"></div>
     <div class="no-results" id="noResults" style="display: none;">
       <i class="fa-regular fa-compass"></i>
@@ -46,6 +59,7 @@
     </div>
   </main>
 
+  <!-- Video Modal -->
   <div class="modal" id="videoModal" aria-hidden="true">
     <div class="modal-backdrop"></div>
     <div class="modal-wrapper">
@@ -64,7 +78,7 @@
   </div>
 
   <footer class="footer">
-    <p>&copy; 2026 Futuristic Video Gallery. Ready for GitHub Pages.</p>
+    <p>&copy; 2026 <strong>Silverhawk Network</strong>. All Rights Reserved. | <a href="https://silverhawk.web.id/" style="color: var(--accent-cyan); text-decoration: none;">silverhawk.web.id</a></p>
   </footer>
 
   <script src="script.js"></script>
