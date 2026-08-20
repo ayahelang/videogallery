@@ -70,5 +70,21 @@
     "categoryName": "Alam & Eksplorasi",
     "description": "Penelusuran lanskap futuristik dan pemukiman dengan gaya arsitektur tidak biasa yang memanjakan mata.",
     "author": "Earth Mysteries"
+  },
+  {
+    "id": "n05r48HwxZs",
+    "title": "Eksplorasi Desa Futuristik & Lanskap Unik Bumi",
+    "category": "nature",
+    "categoryName": "Alam & Eksplorasi",
+    "description": "Dokumentasi visual tempat-tempat bernuansa sci-fi yang tersembunyi di berbagai penjuru dunia.",
+    "author": "Alien Earth Expeditions"
+  },
+  {
+    "id": "O6PxKaDzdmQ",
+    "title": "Peradaban Unik: Permukiman Bergstyle Alien",
+    "category": "travel",
+    "categoryName": "Wisata & Sejarah",
+    "description": "Menelusuri keunikan tempat tinggal dan kebudayaan masyarakat yang mendiami kawasan unik nan surealis.",
+    "author": "Exotic Destinations"
   }
 ]
