@@ -30,5 +30,37 @@
     "categoryName": "Alam & Eksplorasi",
     "description": "Menyaksikan kemegahan fjord, pegunungan salju, dan keajaiban alam Norwegia dalam tayangan sinematik menakjubkan.",
     "author": "Jejak Media"
+  },
+  {
+    "id": "bjywH4to1vA",
+    "title": "Unik & Misterius: Eksplorasi Tempat Paling Menakjubkan",
+    "category": "nature",
+    "categoryName": "Alam & Eksplorasi",
+    "description": "Eksplorasi visual mendalam mengenai lokasi unik dan pemandangan luar biasa yang jarang tersentuh di berbagai penjuru belahan dunia.",
+    "author": "YouTube Content"
+  },
+  {
+    "id": "bNw5WQQegfA",
+    "title": "Desa Unik Bertema Alien di Bumi - Tempat Luar Biasa",
+    "category": "nature",
+    "categoryName": "Alam & Eksplorasi",
+    "description": "Dokumentasi pemukiman dan arsitektur unik yang tampak seperti peradaban luar angkasa namun benar-benar ada di planet Bumi.",
+    "author": "Alien Village Exploration"
+  },
+  {
+    "id": "tXVmxP5Iy90",
+    "title": "Fenomena Desa Terpencil & Arsitektur Unik Dunia",
+    "category": "travel",
+    "categoryName": "Wisata & Sejarah",
+    "description": "Menjelajahi keanehan struktur bangunan dan peradaban lokal di desa-desa terisolasi yang memiliki keunikan tiada tanding.",
+    "author": "World Wonders"
+  },
+  {
+    "id": "nLNwN7UCW5c",
+    "title": "Menjelajahi Pemukiman Misterius Khas Planet Lain",
+    "category": "nature",
+    "categoryName": "Alam & Eksplorasi",
+    "description": "Sajian tayangan visual mengenai lokasi-lokasi surealis di Bumi yang memiliki atmosfer dan lanskap mirip planet asing.",
+    "author": "Sci-Tech & Earth Showcase"
   }
 ]
